@@ -52,7 +52,7 @@ navLinks[4].textContent = "About";
 navLinks[5].textContent = "Contact";
 
 
-
+//created new a tag stuff
 const newContent = document.createElement("a");
 newContent.textContent = "YESSIR!";
 
@@ -66,9 +66,17 @@ nav.appendChild(newContent);
 
 // adding green text color
 
-navLinks.forEach(goGreen => {
+const greenA = document.querySelectorAll("a");
+
+greenA.forEach(goGreen => {
     console.log(goGreen);
     goGreen.style.color = "green";
+})
+
+//make the cursor match the other nav buttons.... didnt match before.
+greenA.forEach(pointer => {
+    console.log(pointer);
+    pointer.style.cursor = "pointer";
 })
 
 //cta section
@@ -83,8 +91,26 @@ topImg.setAttribute('src', "img/header-img.png");
 const buttonText = document.querySelector('.cta-text button');
 buttonText.textContent = "Get Started";
 
+const buttonBackground = document.querySelector("button");
+buttonBackground.style.backgroundColor = "silver";
+
 
 //main content 
+//my attempt at stretch-change h4 color and font size.
+const titleColor = document.querySelectorAll("h4");
+
+titleColor.forEach(goPurple => {
+    console.log(goPurple);
+    goPurple.style.color = "purple";
+})
+
+const titleSize = document.querySelectorAll("h4");
+
+titleSize.forEach(goBig => {
+    console.log(goBig);
+    goBig.style.fontSize = "3rem";
+})
+
 
 const middlePic = document.getElementById('middle-img');
 middlePic.setAttribute('src', 'img/mid-page-accent.jpg')
